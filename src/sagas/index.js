@@ -1,8 +1,8 @@
-import {fork} from 'redux-saga/effects';
+import { fork } from "redux-saga/effects";
 // import {fetchUserWatch} from './users';
 // import {fetchUserReposWatch} from './repos';
 // import {fetchFollowersWatch} from './followers';
-import {setTokenWatch} from './auth';
+import * as setTokenWatch from "./auth";
 
 export default function*() {
   yield fork(setTokenWatch);
