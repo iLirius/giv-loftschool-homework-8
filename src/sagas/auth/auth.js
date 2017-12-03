@@ -1,7 +1,7 @@
-import { authorize, logout } from "../../actions/auth";
 import { take, put, call, select } from "redux-saga/effects";
-import { setTokenApi, clearTokenApi } from "../../api";
+import { authorize, logout } from "../../actions/auth";
 import { getIsAuthorized } from "../../reducers/auth";
+import { setTokenApi, clearTokenApi } from "../../api";
 import {
   getTokenFromLocalStorage,
   setTokenToLocalStorage,
@@ -31,3 +31,5 @@ export function* authFlow() {
     yield call(clearTokenApi);
   }
 }
+
+export default function* setTokenWatch() {}

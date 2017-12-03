@@ -1,5 +1,1 @@
-export {
-  fetchUsersRequest,
-  fetchUsersSuccess,
-  fetchUsersFailure
-} from "./users";
+export { fetchUserRequest, fetchUserSuccess, fetchUserFailure } from "./users";

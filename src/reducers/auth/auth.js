@@ -1,32 +1,16 @@
 import { combineReducers } from "redux";
-import { handleAction, handleActions } from "redux-actions";
-// import {} from "../../actions/auth"
+import { handleAction } from "redux-actions";
+import { authorize, logout, setToken } from "../../actions/auth";
 
-// const error = handleAction(
-//   fetchShowEntitiesFailure,
-//   (state, action) => action.error,
-//   null
-// );
+const isAuthorized = handleAction(
+  authorize,
+  (state, action) => action.payload,
+  false
+);
 
-// const isFetching = handleActions(
-//   {
-//     [fetchShowEntitiesRequest]: () => false,
-//     [fetchShowEntitiesSuccess]: () => true,
-//     [fetchShowEntitiesFailure]: () => true
-//   },
-//   false
-// );
+const token = handleAction(setToken, (state, action) => action.payload, null);
 
-// const entities = handleAction(
-//   fetchShowEntitiesSuccess,
-//   (state, action) => action.payload,
-//   []
-// );
+export const getIsAuthorized = state => state.auth.isAuthorized;
+export const getToken = state => state.auth.token;
 
-export const getIsAuthorized = state => state;
-
-// export default combineReducers({
-//   error,
-//   entities,
-//   isFetching
-// });
+export default combineReducers({ isAuthorized, token });

@@ -1,7 +1,10 @@
+import "./AppRouter.css";
+
 import * as React from "react";
-import { Route, PrivateRoute, Switch, Redirect } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import AuthPage from "../AuthPage";
 import UserPage from "../UserPage";
+import PrivateRoute from "../PrivateRoute";
 
 class AppRouter extends React.Component {
   render() {

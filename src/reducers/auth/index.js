@@ -1,1 +1,1 @@
-export { default, getIsAuthorized } from "./auth";
+export { default, getIsAuthorized, getToken } from "./auth";

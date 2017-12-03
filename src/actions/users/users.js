@@ -1,13 +1,13 @@
 import { createActions } from "redux-actions";
 
 export const {
-  users: {
-    fetchRequest: fetchUsersRequest,
-    fetchSuccess: fetchUsersSuccess,
-    fetchFailure: fetchUsersFailure
+  user: {
+    fetchRequest: fetchUserRequest,
+    fetchSuccess: fetchUserSuccess,
+    fetchFailure: fetchUserFailure
   }
 } = createActions({
-  USERS: {
+  USER: {
     FETCH_REQUEST: undefined,
     FETCH_SUCCESS: [user => user, user => ({ length: user.length })],
     FETCH_FAILURE: undefined
